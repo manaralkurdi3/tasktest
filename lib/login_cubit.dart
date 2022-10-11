@@ -53,6 +53,7 @@ class LoginCubit extends Cubit<LoginState> {
       preferences.setString('username', login.username ?? '');
       preferences.setString('password', login.password ?? '');
       print(LoginCubit.get(context).username);
+
       print(preferences.getString("username"));
       Navigator.push(context, MaterialPageRoute(builder: (context) => Main()));
     } else {

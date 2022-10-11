@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasktest/screen/setting.dart';
+import 'package:localize_and_translate/localize_and_translate.dart';
 
 class AppBarComponent extends StatefulWidget {
   Widget body1;
@@ -20,6 +21,7 @@ class _AppBarComponentState extends State<AppBarComponent> {
           title: const Text(
             'LoginPage',
           ),
+
         ),
         drawer: Drawer(
             child: ListView(
