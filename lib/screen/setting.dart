@@ -20,6 +20,7 @@ class _SettingState extends State<Setting> {
       child: Text("تاكيد".tr()),
       onPressed: () {
         SettingCubit.get(context).logOut(context);
+
       },
     );
     Widget cancelButton = TextButton(
@@ -31,7 +32,7 @@ class _SettingState extends State<Setting> {
 
     // set up the AlertDialog
     AlertDialog alert = AlertDialog(
-      content: Text("هل انت متأكد من تسجيل الخروج  ".tr()),
+      content: Text("هل انت متأكد من تسجيل الخروج".tr()),
       actions: [
         remindButton,
         cancelButton,
@@ -103,6 +104,7 @@ class _SettingState extends State<Setting> {
                                 ? ' Arabic'
                                 : 'Enghlish'),
                             value: 'en'),
+
                       ],
                     ),
                     Text("language"),

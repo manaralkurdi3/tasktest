@@ -39,57 +39,59 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return AppBarComponent(Container(
-      child: Padding(
-        padding: const EdgeInsets.only(top: 50.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              height: 20,
-              child: Text("Login".tr()),
-            ),
-            Form(
-              key: formkey,
-              child: Column(
-                children: [
-                  TextFieldComponent(
-                    callback: validateusername,
-                    hinttext: "username",
-                    textcontroller: username,
+
+    return AppBarComponent(
+        Container(
+          child: Padding(
+            padding: const EdgeInsets.only(top: 50.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  height: 20,
+                  child: Text("Login".tr()),
+                ),
+                Form(
+                  key: formkey,
+                  child: Column(
+                    children: [
+                      TextFieldComponent( callback:
+                      validateusername,hinttext: "username".tr(),textcontroller: username,
+                      ),
+                      TextFieldComponent(
+                        hinttext: "password".tr(),callback: validatePassword,textcontroller: password,
+                      ),
+                    ],
                   ),
-                  TextFieldComponent(
-                    hinttext: "password",
-                    callback: validatePassword,
-                    textcontroller: password,
-                  ),
-                ],
-              ),
-            ),
-            InkWell(
-              onTap: () {
-                if (formkey.currentState!.validate()) {
-                  LoginCubit.get(context).login(context,
-                      username.text.toString(), password.text.toString());
-                }
-              },
-              child: BlocBuilder<LoginCubit, LoginState>(
-                builder: (context, state) {
-                  return Container(
-                    height: 40,
-                    width: MediaQuery.of(context).size.width * 0.7,
-                    child: Center(child: Text("Login")),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.blue),
-                  );
+                ),
+
+                InkWell(onTap: () {
+                  if(formkey.currentState!.validate()){
+                LoginCubit.get(context).login(context,username.text.toString(), password.text.toString());
+                  }
                 },
+                  child: BlocBuilder<LoginCubit, LoginState>(
+                    builder: (context, state) {
+                      return Container(
+                        height: 40,
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width * 0.7,
+                        child: Center(child: Text("Login".tr())),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.blue
+                        ),
+                      );
+                    },
+                  ),
+                )],
               ),
             ),
-          ],
+
         ),
-      ),
-    ));
+      );
   }
 }

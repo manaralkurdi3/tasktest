@@ -1,5 +1,25 @@
+<<<<<<< HEAD
 {
   " تسجيل الدخول": "Login ",
   "رقم الهاتف": "Phonenumber",
   "اللغة": "Language"
+=======
+{" تسجيل الدخول": "Login ",
+"اللغة": "language",
+  "اعدادات الاسطول": "Fleet Settings",
+  "الكل": "All",
+  "مشترك": "subscriber",
+  "غير مشترك": "notsubscriber",
+  "اعدادات جديدة": "New setting",
+  "اسم المستخدم" :"username",
+   "كلمة المرور" :"password",
+        "الاشعارات": "notification",
+  "اللغه": "Language",
+  "تسجيل الخروج": "Logout",
+  "الاعدادات": "setting",
+  "هل انت متأكد من تسجيل الخروج": "Are you sure you want to log out?",
+  "تأكيد": "emphasis",
+  "الغاء": "Cancellation",
+  "الخدمات": "services"
+>>>>>>> 56a3fd1 (push)
 }

@@ -1,3 +1,19 @@
 {
-  "Login": "تطبيق تجريبى"
+  "Login": "تسجيل الدخول ",
+  "Language" : "اللغة",
+ "Fleet Settings" :"اعدادات الاسطول",
+   "All": "الكل",
+  "subscriber":"مشترك",
+   "notsubscriber": "غير مشترك",
+   "New setting" : "اعدادات جديدة",
+  "username": "اسم المستخدم" ,
+  "password": "كلمة المرور" ,
+   "notification": "الاشعارات",
+ "Logout": "تسجيل الخروج",
+   "setting" :"الاعدادات",
+    "Are you sure you want to log out?":"هل انت متأكد من تسجيل الخروج" ,
+  "emphasis": "تأكيد" ,
+  "Cancellation": "الغاء",
+  "services": "الخدمات",
+  "language": "اللغة"
 }
